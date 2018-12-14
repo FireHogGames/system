@@ -1,17 +1,14 @@
-from Window import WinAPI
-
-
 def Say(sentence):
     print(str(sentence))
 
 #use this to keep the communication running
 isRunning = True
+
+#used for standby and start up
 isInit = False;
 
 #create a loop that keeps running until the user ends the session or system crashes
 while isRunning == True:
-
-    system_status = "Inactive"
     
     user_input = input("system->command: ")
 
@@ -27,7 +24,7 @@ while isRunning == True:
         else:
             Say("How can I help you sir?")
 
-    if(user_input == "System wake up"):
+    if(str(user_input) == "System wake up"):
         if(isInit == False):
             isInit = True
             Say("How can I help you?")
@@ -50,9 +47,6 @@ while isRunning == True:
             if(isInit == True):
                 isInit = False
                 Say("Standby mode on!")
-
-        if(user_input == "Make a window for me"):
-            WinAPI.InitWindow()
 
         if(user_input == "Make a calculation for me"):
            Say("Whats value a?")
