@@ -19,4 +19,8 @@
 19 name: Niek, last-name: Schlepers
 20 name: Jorian, last-name: Vink
 21 name: Christian, last-name: van der Ziel
-22 name: Wessel, last-name: van den Boogaard 
+22 name: Wessel, last-name: van den Boogaard
+23 name: Bo, last-name: Dielman
+24 name: Nienke, last-name: de Jong
+25 name: Nicky, last-name: Jiang
+26 name: Silvian, last-name: Horst 

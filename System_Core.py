@@ -58,6 +58,34 @@ while isRunning == True:
            c=int(a)+int(b)
 
            Say("The answer is " + str(c) + "!")
+
+        if(user_input == "Open the database"):
+            #Load the database file
+            f = open("database.txt", "r")
+            
+            #create an array of users
+            lines = f.readlines()
+
+            #reset the line numbers
+            linenumber = 0
+            #show how many contacts are abailible
+            Say("You have " + str(len(lines)) + " contacts in your database.")
+
+            #ask for a certain id
+            linenumber = input("Which user id would you want to see sir: ")
+
+            Say("")
+
+            #show the asked data
+            Say("Here is the data for id " + str(linenumber) + "!")
+
+            #correct the array pointer
+            linenumber = int(linenumber) - 1
+
+            Say("")
+
+            #give the outputdata
+            Say(lines[int(linenumber)])
             
         
 
