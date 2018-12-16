@@ -5,8 +5,6 @@ mute = False
 def Say(sentence):
     if(mute == False):
         engine = pyttsx.init()
-        rate = engine.getProperty('rate')
-        engine.setProperty('rate', rate+10)
         engine.say(str(sentence))
         engine.runAndWait()
     else:
@@ -93,15 +91,11 @@ while isRunning == True:
             #ask for a certain id
             linenumber = input("ID-> ")
 
-            Say("")
-
             #show the asked data
             Say("Here is the data for id " + str(linenumber) + "!")
 
             #correct the array pointer
             linenumber = int(linenumber) - 1
-
-            Say("")
 
             #give the outputdata
             Say(lines[int(linenumber)])
