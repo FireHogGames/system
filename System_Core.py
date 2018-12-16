@@ -21,17 +21,17 @@ while isRunning == True:
     
     user_input = input("system->command: ")
 
-    if(user_input == "Mute"):
+    if(user_input == "mute"):
         mute = True
 
-    if(user_input == "Unmute"):
+    if(user_input == "unmute"):
         mute = False
     
-    if(user_input == "End session"):
+    if(user_input == "end session"):
         isRunning = False
         exit()
 
-    if(user_input == "System are you there"):
+    if(user_input == "system are you there"):
         if(isInit == False):
             isInit = True
             Say("How can I help you?")
@@ -39,7 +39,7 @@ while isRunning == True:
         else:
             Say("How can I help you sir?")
 
-    if(str(user_input) == "System wake up"):
+    if(str(user_input) == "system wake up"):
         if(isInit == False):
             isInit = True
             Say("How can I help you?")
@@ -49,7 +49,7 @@ while isRunning == True:
     
     if(isInit == True):
 
-        if(user_input == "Test communication"):
+        if(user_input == "test communication"):
             Say("Hello world!")
 
         if(user_input == "Hello system"):
@@ -63,7 +63,7 @@ while isRunning == True:
                 isInit = False
                 Say("Standby mode on!")
 
-        if(user_input == "Make a calculation for me"):
+        if(user_input == "make a calculation for me"):
            Say("Whats value a?")
            a = input("A: ")
            Say("What is value b?")
@@ -74,9 +74,9 @@ while isRunning == True:
 
            Say("The answer is " + str(c) + "!")
 
-        if(user_input == "Open the database"):
+        if(user_input == "open the database"):
             #Load the database file
-            f = open("database.txt", "r")
+            f = open("./database.txt", "r")
             
             #create an array of users
             lines = f.readlines()
