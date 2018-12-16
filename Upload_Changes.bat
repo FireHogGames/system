@@ -16,6 +16,8 @@ git add Update.bat
 echo updated Update.bat
 git add database.txt
 echo updated database.txt
+git add _WINDOWS/Run.bat
+echo Updated _WINDOWS/Run.bat
 echo -----------------
 
 echo ------System-----

@@ -5,4 +5,4 @@ echo Update complete
 echo Clearing screen
 cls
 echo Starting System core
-System_Core.py
+C:/PY/system/System_Core.py
