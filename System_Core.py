@@ -1,5 +1,16 @@
+import pyttsx
+
+mute = False
+
 def Say(sentence):
-    print(str(sentence))
+    if(mute == False):
+        engine = pyttsx.init()
+        rate = engine.getProperty('rate')
+        engine.setProperty('rate', rate+10)
+        engine.say(str(sentence))
+        engine.runAndWait()
+    else:
+        print(str(sentence))
 
 #use this to keep the communication running
 isRunning = True
@@ -12,6 +23,12 @@ while isRunning == True:
     
     user_input = input("system->command: ")
 
+    if(user_input == "Mute"):
+        mute = True
+
+    if(user_input == "Unmute"):
+        mute = False
+    
     if(user_input == "End session"):
         isRunning = False
         exit()
@@ -71,8 +88,10 @@ while isRunning == True:
             #show how many contacts are abailible
             Say("You have " + str(len(lines)) + " contacts in your database.")
 
+            Say("Wich user would you like to see, sir?")
+            
             #ask for a certain id
-            linenumber = input("Which user id would you want to see sir: ")
+            linenumber = input("ID-> ")
 
             Say("")
 
