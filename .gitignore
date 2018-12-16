@@ -1,4 +1,6 @@
 #directories
 __pycache__/
+
+#files
 *.pyc
 *.swp
