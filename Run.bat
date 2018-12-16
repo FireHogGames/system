@@ -1,4 +1,3 @@
-@echo off
 echo Updating to recent github push
 git pull
 echo Update complete

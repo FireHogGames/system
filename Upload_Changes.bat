@@ -12,6 +12,7 @@ git add Upload_Changes.bat
 echo updated Upload_Changes.bat
 git add Run.bat
 echo updated Run.bat
+git add Update.bat
 echo -----------------
 
 echo ------System-----
