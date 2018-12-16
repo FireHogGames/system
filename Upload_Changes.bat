@@ -13,6 +13,9 @@ echo updated Upload_Changes.bat
 git add Run.bat
 echo updated Run.bat
 git add Update.bat
+echo updated Update.bat
+git add database.txt
+echo updated database.txt
 echo -----------------
 
 echo ------System-----
