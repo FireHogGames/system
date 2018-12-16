@@ -18,8 +18,8 @@ git add database.txt
 echo updated database.txt
 git add _WINDOWS/Run.bat
 echo Updated _WINDOWS/Run.bat
-git add Run_Debug.bat
-echo Updated Run_Debug.bat
+git add _WINDDOWS/Run_Debug.bat
+echo Updated _WINDDOWS/Run_Debug.bat
 echo -----------------
 
 echo ------System-----
