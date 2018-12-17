@@ -1,14 +1,15 @@
 import pyttsx
+import time
 
 mute = False
 
 def Say(sentence):
+    print(str(sentence))
+    
     if(mute == False):
         engine = pyttsx.init()
         engine.say(str(sentence))
         engine.runAndWait()
-    else:
-        print(str(sentence))
 
 #use this to keep the communication running
 isRunning = True
@@ -99,8 +100,20 @@ while isRunning == True:
 
             #give the outputdata
             Say(lines[int(linenumber)])
+
+        if(user_input == "set a timer"):
+            Say("How long do you want the timer to be?")
+            length = input("Time length in seconds: ")
+            Say("Timer set for " + str(length) + ".")
             
-        
+            time.sleep(int(length))
+
+            #repeat the alarm 5 times
+            for x in range(0, 5):
+                Say("Time is over.")
+
+        if(user_input == "hide window"):
+            Say("Niek, it doesn't work like that!!")
 
     else:
         Say("I'm currently on standby!")
